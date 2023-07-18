@@ -7,27 +7,42 @@
     <link rel="stylesheet" href="/style.css" />
     <title>Document</title>
   </head>
-
-  <header>
-    <div class="logo-div">
-      <img class="logo" src="/assets (1)/epicode_logo.png" alt="" />
-    </div>
-
-    <h1>Tell us how it's going</h1>
-  </header>
-
   <body>
-    <div class="rating-stars">
-      <img src="star.svg" alt="" />
-      <img src="star.svg" alt="" />
-      <img src="star.svg" alt="" />
-      <img src="star.svg" alt="" />
-      <img src="star.svg" alt="" />
-      <img src="star.svg" alt="" />
-      <img src="star.svg" alt="" />
-      <img src="star.svg" alt="" />
-      <img src="star.svg" alt="" />
-      <img src="star.svg" alt="" />
+    <header>
+      <header>
+        <div class="logo-div">
+          <img class="logo" src="/assets (1)/epicode_logo.png" alt="" />
+        </div>
+      </header>
+    </header>
+
+    <div class="feedback-container">
+      <h1>Tell us how it's going</h1>
+      <h6>From 0 to 10, how likely are you to reccomend EPICODE to a friend or colleague</h6>
+
+      <div class="rating-stars">
+        <img src="star.svg" alt="" />
+        <img src="star.svg" alt="" />
+        <img src="star.svg" alt="" />
+        <img src="star.svg" alt="" />
+        <img src="star.svg" alt="" />
+        <img src="star.svg" alt="" />
+        <img src="star.svg" alt="" />
+        <img src="star.svg" alt="" />
+        <img src="star.svg" alt="" />
+        <img src="star.svg" alt="" />
+      </div>
+
+      <div><h6>Leave us an open feedback about your experience so far</h6></div>
+
+      <div>
+        <form action="/action_page.php" id="usrform">
+          <textarea rows="4" cols="50" name="comment" form="usrform">Leave a comment</textarea>
+        </form>
+      </div>
+      <div>
+        <button class="btn-cyan">MORE INFO</button>
+      </div>
     </div>
 
     <!-- Defer indicates that a script should be executed after the page loads ... -->
