@@ -7,12 +7,14 @@ body {
   background-attachment: fixed;
 }
 
+/* where the body of the webpage begins */
 main {
   font-family: "Inter", sans-serif;
   margin: 50px 120px 50px 120px;
   color: white;
 }
 
+/* the elements of the webpage  */
 h1,
 h2,
 h3,
@@ -53,8 +55,13 @@ button {
   font-size: 20px;
   font-weight: 600;
   background-color: #00ffff;
+  border: none;
+  box-shadow: 0 0 10px cyan;
 }
 
+/* end of elements */
+
+/* other classes and elements of the page  */
 .bold {
   font-weight: 600;
 }
@@ -73,4 +80,33 @@ button {
 
 .welcome-container > h1 {
   margin-top: 100px;
+}
+
+/* question page  */
+
+/* .question-body {
+  text-align: center;
+} */
+
+.main-question {
+  text-align: center;
+}
+
+.answers-btn {
+  width: 400px;
+  border-radius: 40px;
+  margin-left: 25px;
+}
+
+/* feedback page */
+.rating-stars img {
+  opacity: 0.2;
+}
+
+.rating-stars img.selected {
+  opacity: 1;
+}
+
+.logo-div {
+  margin-top: 30px;
 }
