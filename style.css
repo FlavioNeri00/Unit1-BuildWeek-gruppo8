@@ -131,8 +131,23 @@ footer h3 {
   font-size: 20px;
 }
 /* feedback page */
+
+.feedback-container h1 {
+  font-weight: 700;
+}
+
+.feedback-container h6 {
+  font-weight: 400;
+}
+
+.rating-stars {
+  margin-block: 37px;
+}
+
 .rating-stars img {
   opacity: 0.2;
+  width: 59px;
+  margin-inline: 2px;
 }
 
 .rating-stars img.selected {
@@ -160,6 +175,25 @@ footer h3 {
 
 .feedback-container h6:last-child() {
   padding-top: 30px;
+}
+
+form textarea {
+  border: 0;
+  border-bottom: 3.5px solid purple;
+  background-color: transparent;
+  width: 1162px;
+  height: 23px;
+  font-family: "inter";
+  font-size: 19px;
+  overflow: hidden;
+  margin-bottom: 55px;
+  color: white;
+  resize: none;
+}
+
+form textarea:focus {
+  border: none;
+  outline: none;
 }
 /* end of Feedback page */
 
