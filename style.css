@@ -48,7 +48,7 @@ form {
   margin-top: 100px;
   display: inline-block;
 }
-button {
+.btn-cyan {
   margin-left: 170px;
   width: 200px;
   height: 70px;
@@ -82,13 +82,12 @@ button {
   margin-top: 100px;
 }
 
-/* question page  */
+/* / question page  / */
 
-/* .question-body {
+.question-body {
   text-align: center;
-} */
-
-.main-question {
+}
+.main-center {
   text-align: center;
 }
 
@@ -109,4 +108,9 @@ button {
 
 .logo-div {
   margin-top: 30px;
+}
+
+.correct-left,
+.wrong-right {
+  color: white;
 }
