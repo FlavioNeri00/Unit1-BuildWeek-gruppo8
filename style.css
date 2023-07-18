@@ -111,6 +111,26 @@ form {
   margin-top: 30px;
 }
 
+.feedback-container {
+  text-align: center;
+  color: white;
+  margin: 0 auto;
+}
+
+.feedback-container h1 {
+  font-size: 4rem;
+  margin: 30px;
+}
+.feedback-container h6 {
+  font-size: 1.8rem;
+  margin: 0 auto;
+}
+
+.feedback-container h6:last-child() {
+  padding-top: 30px;
+}
+/* end of Feedback page */
+
 .correct-left,
 .wrong-right {
   color: white;
