@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "Unit1-BuildWeek-gruppo8",
+			"path": "."
+		},
+		{
+			"name": "assets (1)",
+			"path": "../../Downloads/assets (1)"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Unit1-BuildWeek-gruppo8"
+	}
+}
