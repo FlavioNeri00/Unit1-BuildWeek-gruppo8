@@ -4,40 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exams Result</title>
-    <link rel="stylesheet" href="./style-results.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <header>
-      <img src="./assets (1)/epicode_logo.png" alt="epicode-logo" />
+      <img class="logo" src="./assets (1)/epicode_logo.png" alt="epicode-logo" />
     </header>
-    <div>
-      <h1 class="title">RESULTS</h1>
-      <h3 class="title">The summary of your answers:</h3>
-    </div>
+
+    <main>
+      <div class="main-question">
+        <h1 class="title">Results</h1>
+        <h3 class="title under-title">The summary of your answers:</h3>
+      </div>
+    </main>
     <div class="correct-left">
-      <h2 class="correct-title">CORRECT</h2>
+      <h2 class="correct-title">Correct</h2>
       <div>
-        <h2 class="percentage">66.7%</h2>
+        <h2 class="percentage bold">66.7</h2>
         <div>
-          <p class="number-questions">4/6</p>
+          <h5 class="number-questions">4/6 questions</h5>
+        </div>
+      </div>
+    </div>
+    <div class="chart-container">
+      <div class="donut">
+        <div class="hole">
+          <h6>Congratulations!<br /><span>You passed the exam.</span></h6>
+          <p>
+            We'll send you the certificate <br />in few minutes. <br />Check your email (including <br />promotions /
+            spam folder)
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="wrong-right">
+      <h2 class="correct-title">Wrong</h2>
+      <div>
+        <h2 class="percentage bold">66,7%</h2>
+        <div>
+          <h5 class="number-questions">4/6</h5>
         </div>
       </div>
     </div>
 
-    <div class="wrong-right">
-      <h2 class="correct-title">WRONG</h2>
-      <div>
-        <h2 class="percentage">33,3%</h2>
-        <div>
-          <p class="number-questions">2/6</p>
-        </div>
-      </div>
-    </div>
-    <footer>
-      <div>
-        <button>RATE US</button>
-      </div>
+    <footer class="footer-results">
+      <button class="feedback-button">RATE US</button>
     </footer>
+
     <script src="./script-results.js"></script>
   </body>
 </html>
