@@ -354,3 +354,7 @@ form textarea:focus {
 .remaining-timer {
   margin-top: 0;
 }
+
+.next-container {
+  text-align: end;
+}
