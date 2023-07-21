@@ -3,14 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
+
   <body>
-    <header class="pie"></header>
-    <h1>How can I create a checkbox in HTML?</h1>
-    <div class="answers"></div>
-    <footer>
-      <h3>question 1/10</h3>
-    </footer>
+    <div class="container">
+      <header class="pie">
+        <div><img class="logo" src="/assets (1)/epicode_logo.png" alt="" /></div>
+      </header>
+      <div class="chart-container chart-container-questions">
+        <div class="donut donut-questions">
+          <div class="hole hole-questions">
+            <div class="timer-container">
+              <p class="seconds-timer">SECONDS</p>
+              <div id="demo"></div>
+              <p class="remaining-timer">REMAINING</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <main class="main-question">
+        <h1 class="question" id="question-title">
+          ESEMPIO: <br />
+          How can I create a <br />
+          <span class="bold">checkbox in HTML?</span>
+        </h1>
+        <div class="answers">
+          <div>
+            <button onclick="Verifying(id)" id="btn0" class="answers-btn" required></button>
+            <button onclick="Verifying(id)" id="btn1" class="answers-btn" required></button>
+          </div>
+          <div>
+            <button onclick="Verifying(id)" id="btn2" class="answers-btn" required></button>
+            <button onclick="Verifying(id)" id="btn3" class="answers-btn" required></button>
+          </div>
+        </div>
+        <footer>
+          <h3>QUESTION 0<span class="purple-p">/10</span></h3>
+          <div class="footer-questions-btn">
+            <button id="next" class="btn-cyan">NEXT</button>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <script src="./script-results.js"></script>
   </body>
 </html>

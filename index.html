@@ -3,16 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
-    <main>
-      <div class="welcome-container">
-        <div>
-          <div><img class="logo" src="epicode_logo.png" alt="" /></div>
+    <div class="container">
+      <div><img class="logo" src="./assets (1)/epicode_logo.png" alt="" /></div>
 
+      <main>
+        <div class="welcome-container">
           <div>
             <h1>
               Welcome to <br />
@@ -39,16 +38,24 @@
             <li>This exam will take approx. <span class="bold">0-5 minutes.</span></li>
           </ul>
         </div>
-      </div>
 
-      <div>
-        <form action="">
-          <input type="checkbox" class="bold" name="" value="" required />
-          <label for="subscribeNews">I promise to answer myself without help from anyone</label>
-        </form>
-
-        <button>PROCEED</button>
-      </div>
-    </main>
+        <div>
+          <form class="form" action="./questions.html">
+            <label for="welcomeCheckbox">
+              <input
+                id="welcomeCheckbox"
+                type="checkbox"
+                class="bold checkbox myinput geekmark"
+                name=""
+                value=""
+                required
+              />
+              <span class="checkmark">I promise to answer myself without help from anyone</span>
+            </label>
+            <button type="submit" class="btn-cyan">PROCEED</button>
+          </form>
+        </div>
+      </main>
+    </div>
   </body>
 </html>

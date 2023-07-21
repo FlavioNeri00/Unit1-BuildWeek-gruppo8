@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <header>
+          <div class="logo-div">
+            <img class="logo" src="/assets (1)/epicode_logo.png" alt="" />
+          </div>
+        </header>
+      </header>
+
+      <div class="feedback-container">
+        <h1>Tell us how it's going</h1>
+        <h6>From 0 to 10, how likely are you to reccomend EPICODE <br />to a friend or colleague</h6>
+
+        <div class="rating-stars">
+          <img src="./assets (1)/star.svg" alt="" />
+          <img src="./assets (1)/star.svg" alt="" />
+          <img src="./assets (1)/star.svg" alt="" />
+          <img src="./assets (1)/star.svg" alt="" />
+          <img src="./assets (1)/star.svg" alt="" />
+          <img src="./assets (1)/star.svg" alt="" />
+          <img src="./assets (1)/star.svg" alt="" />
+          <img src="./assets (1)/star.svg" alt="" />
+          <img src="./assets (1)/star.svg" alt="" />
+          <img src="./assets (1)/star.svg" alt="" />
+        </div>
+
+        <div><h6>Leave us an open feedback about your experience so far</h6></div>
+
+        <div>
+          <form action="/action_page.php" id="usrform">
+            <textarea
+              rows="4"
+              cols="50"
+              name="comment"
+              form="usrform"
+              placeholder="     Write your comment here"
+            ></textarea>
+          </form>
+        </div>
+        <div>
+          <form
+            action="https://epicode.com/it/?utm_source=adwords&utm_campaign=Brand&utm_adgroup=brandexact&utm_term=epicode&utm_medium=ppc&hsa_acc=1246633295&hsa_cam=11897141170&hsa_grp=115607542236&hsa_ad=639941169967&hsa_src=g&hsa_tgt=kwd-1083842420863&hsa_kw=epicode&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQjw2eilBhCCARIsAG0Pf8sWzPwYtGCAjbsWcowaf3gSJ7rusAhPzMngnvpp-xSk8ljh0t63ZkIaAkhUEALw_wcB"
+          >
+            <button class="btn-cyan btn-cyan-feedback-page">MORE INFO</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Defer indicates that a script should be executed after the page loads ... -->
+    <script src="./feedback.js" defer></script>
+  </body>
+</html>
