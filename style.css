@@ -138,6 +138,9 @@ footer h3 {
   letter-spacing: 3px;
   font-size: 20px;
 }
+.footer-questions-btn {
+  text-align: end;
+}
 /* feedback page */
 
 .feedback-container h1 {
