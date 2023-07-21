@@ -7,6 +7,7 @@ let correctAnswer = 0;
 let incorrectAnswer = 0;
 
 let posizioneArray = 0;
+let indexQuestions = [];
 
 function countdown() {
   if (seconds == -1) {
@@ -117,6 +118,7 @@ const questionsCreator = () => {
   const questionTitle = document.getElementById("question-title");
   console.log(questionTitle);
   let random = Math.floor(Math.random() * questions.length);
+
   console.log(random);
   posizioneArray = random;
   questionTitle.innerText = `${questions[random].question}`;
