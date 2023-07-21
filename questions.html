@@ -10,43 +10,44 @@
   </head>
 
   <body>
-    <header class="pie">
-      <div><img class="logo" src="/assets (1)/epicode_logo.png" alt="" /></div>
-    </header>
-    <div class="chart-container chart-container-questions">
-      <div class="donut donut-questions">
-        <div class="hole hole-questions">
-          <div class="timer-container">
-            <p class="seconds-timer">SECONDS</p>
-            <div id="demo"></div>
-            <p class="remaining-timer">REMAINING</p>
+    <div class="container">
+      <header class="pie">
+        <div><img class="logo" src="/assets (1)/epicode_logo.png" alt="" /></div>
+      </header>
+      <div class="chart-container chart-container-questions">
+        <div class="donut donut-questions">
+          <div class="hole hole-questions">
+            <div class="timer-container">
+              <p class="seconds-timer">SECONDS</p>
+              <div id="demo"></div>
+              <p class="remaining-timer">REMAINING</p>
             </div>
+          </div>
         </div>
       </div>
-    <main class="main-question">
-      <h1 class="question" id="question-title">
-        ESEMPIO: <br>
-        How can I create a <br />
-        <span class="bold">checkbox in HTML?</span>
-      </h1>
-      <div class="answers">
-        <div id="btn-line-1">
-        <button id="btn0" class="bold"></button>
-        <button id="btn1"  class="bold"></button>
+      <main class="main-question">
+        <h1 class="question" id="question-title">
+          ESEMPIO: <br />
+          How can I create a <br />
+          <span class="bold">checkbox in HTML?</span>
+        </h1>
+        <div class="answers">
+          <div>
+            <button onclick="onVerifica(id)" id="btn0" class="answers-btn" required></button>
+            <button onclick="onVerifica(id)" id="btn1" class="answers-btn" required></button>
+          </div>
+          <div>
+            <button onclick="onVerifica(id)" id="btn2" class="answers-btn" required></button>
+            <button onclick="onVerifica(id)" id="btn3" class="answers-btn" required></button>
+          </div>
         </div>
-        <div id="btn-line-2">
-          <button id="btn2" class="bold"></button>
-          <button id="btn3" class="bold"></button>
-          
-        </div>
-      </div>
-      <footer>
-        <h3>QUESTION 0<span class="purple-p">/10</span></h3>
-        <div class="next-container">
-        <button id="next" class="btn-cyan">NEXT</button>
-        </div>
-      </footer>
-    </main>
+        <footer>
+          <h3>QUESTION 0<span class="purple-p">/10</span></h3>
+
+          <button id="next" class="btn-cyan">NEXT</button>
+        </footer>
+      </main>
+    </div>
     <script src="./script-results.js"></script>
   </body>
 </html>

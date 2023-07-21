@@ -3,7 +3,10 @@ let elem = document.getElementById("demo");
 let timerId = 0;
 let questionNumber = 0;
 let correctAnswer = 0;
+
 let incorrectAnswer = 0;
+
+let posizioneArray = 0;
 
 function countdown() {
   if (seconds == -1) {
@@ -15,10 +18,10 @@ function countdown() {
   }
 }
 
-function time() {
+function tempo() {
   timerId = setInterval(countdown, 1000);
 }
-time();
+tempo();
 
 const questions = [
   {
@@ -108,14 +111,14 @@ let buttonsContainer = document.querySelector("#btn-container");
 
 const nextButton = document.getElementById("next");
 const questionsCreator = () => {
-  // let answers = [];
-
   let h3 = document.querySelector("h3");
-  h3.innerText = `${questionNumber}`;
+
+  h3.innerHTML = `QUESTION ${questionNumber}<span class = "purple-p">/10</span>`;
   const questionTitle = document.getElementById("question-title");
   console.log(questionTitle);
   let random = Math.floor(Math.random() * questions.length);
   console.log(random);
+  posizioneArray = random;
   questionTitle.innerText = `${questions[random].question}`;
   let answers = [];
   for (let j = 0; j < questions[random].incorrect_answers.length; j++) {
@@ -126,6 +129,8 @@ const questionsCreator = () => {
 
   for (i = 0; i < answers.length; i++) {
     const firstButtonDiv = document.getElementById("btn" + i);
+    firstButtonDiv.disabled = false;
+    firstButtonDiv.style.backgroundColor = "rgb(255 255 255 / 11%)";
     firstButtonDiv.classList.add("answers-btn");
     firstButtonDiv.innerText = `${answers[i]}`;
   }
@@ -142,4 +147,97 @@ const questionsCreator = () => {
   timerId = 0;
 };
 
+function onVerifica(id) {
+  // const titolo = document.getElementById("question-title").innerText;
+  // const risposta = questions.find(a => a.question === titolo);
+
+  risposta = questions[posizioneArray];
+  const rispostaData = document.getElementById(id);
+
+  questionNumber++;
+  console.log("numero", questionNumber);
+
+  if (risposta.correct_answer === rispostaData.innerText) {
+    rispostaData.style.backgroundColor = "green";
+    correctAnswer++;
+  } else {
+    rispostaData.style.backgroundColor = "red";
+    incorrectAnswer++;
+  }
+
+  console.log("risposta esetta: " + correctAnswer + "     risposta sbagliata " + incorrectAnswer);
+
+  for (let index = 0; index < 4; index++) {
+    document.getElementById("btn" + index).disabled = "true";
+  }
+  newPage();
+}
+
 nextButton.onclick = questionsCreator;
+
+const newPage = () => {
+  if (questionNumber === 10) {
+    const myOldBody = document.getElementsByTagName("body")[0];
+    console.log("container", myOldBody);
+    let title = "";
+    let evaluation = "";
+    let certificate = "";
+
+    if (correctAnswer >= 6) {
+      title = "Congratulations!";
+      evaluation = "You passed the exam.";
+      certificate =
+        " We'll send you the certificate in few minutes. Check your email (including promotions /  spam folder)";
+    } else {
+      title = "Bad Luck!";
+      evaluation = "";
+      certificate = "You didn't pass the exam.";
+    }
+
+    myOldBody.innerHTML = `<div class= "container"> <header>
+    <img class="logo" src="./assets (1)/epicode_logo.png" alt="epicode-logo" />
+  </header>
+
+  <main>
+    <div class="main-question">
+      <h1 class="title">Results</h1>
+      <h3 class="title under-title">The summary of your answers:</h3>
+    </div>
+  </main>
+  <div class="correct-left">
+    <h2 class="correct-title">Correct</h2>
+    <div>
+      <h2 class="percentage bold">${(correctAnswer / 10) * 100}%</h2>
+      <div>
+        <h5 class="number-questions">${correctAnswer}/10 questions</h5>
+      </div>
+    </div>
+  </div>
+  <div class="chart-container">
+    <div class="donut">
+      <div class="hole">
+        <h6>${title}<br /><span>${evaluation}</span></h6>
+        <p>
+        ${certificate}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="wrong-right">
+    <h2 class="correct-title">Wrong</h2>
+    <div>
+      <h2 class="percentage bold">${100 - (correctAnswer / 10) * 100}%</h2>
+      <div>
+        <h5 class="number-questions">${incorrectAnswer}/10 questions</h5>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-results">
+  <form action="./feedback.html">
+    <button class="feedback-button" type="submit">RATE US</button>
+  </form>
+  </footer>
+  </div>`;
+  }
+};

@@ -7,43 +7,56 @@
     <title>Document</title>
   </head>
   <body>
-    <div><img class="logo" src="./assets (1)/epicode_logo.png" alt="" /></div>
+    <div class="container">
+      <div><img class="logo" src="./assets (1)/epicode_logo.png" alt="" /></div>
 
-    <main>
-      <div class="welcome-container">
-        <div>
-          <h1>
-            Welcome to <br />
-            <span class="bold">your exam</span>
-          </h1>
+      <main>
+        <div class="welcome-container">
+          <div>
+            <h1>
+              Welcome to <br />
+              <span class="bold">your exam</span>
+            </h1>
+          </div>
+
+          <h4 class="purple-p bold">Instructions</h4>
+
+          <p class="first-page-p">
+            We don't expect most engineers to know the answers to all of these <br />
+            questions, so don't if you're unsure of a few of them.
+          </p>
         </div>
 
-        <h4 class="purple-p bold">Instructions</h4>
+        <div>
+          <ul>
+            <li>
+              Each question is <span class="bold">timed</span> and can only be <span class="bold">answered once.</span>
+            </li>
+            <li>
+              Changing browser tab or opening other windows will <span class="bold">invalidate the question</span>
+            </li>
+            <li>This exam will take approx. <span class="bold">0-5 minutes.</span></li>
+          </ul>
+        </div>
 
-        <p class="first-page-p">
-          We don't expect most engineers to know the answers to all of these <br />
-          questions, so don't if you're unsure of a few of them.
-        </p>
-      </div>
-
-      <div>
-        <ul>
-          <li>
-            Each question is <span class="bold">timed</span> and can only be <span class="bold">answered once.</span>
-          </li>
-          <li>Changing browser tab or opening other windows will <span class="bold">invalidate the question</span></li>
-          <li>This exam will take approx. <span class="bold">0-5 minutes.</span></li>
-        </ul>
-      </div>
-
-      <div>
-        <form action="./questions.html">
-          <input id="welcomeCheckbox" type="checkbox" class="bold checkbox" name="" value="" required />
-          <label for="welcomeCheckbox"></label>
-          <span>I promise to answer myself without help from anyone</span>
-          <button type="submit" class="btn-cyan">PROCEED</button>
-        </form>
-      </div>
-    </main>
+        <div>
+          <form class="form" action="./questions.html">
+            <label for="welcomeCheckbox">
+              <input
+                id="welcomeCheckbox"
+                type="checkbox"
+                checked="checked"
+                class="bold checkbox"
+                name=""
+                value=""
+                required
+              />
+              <span class="checkmark">I promise to answer myself without help from anyone</span>
+            </label>
+            <button type="submit" class="btn-cyan">PROCEED</button>
+          </form>
+        </div>
+      </main>
+    </div>
   </body>
 </html>

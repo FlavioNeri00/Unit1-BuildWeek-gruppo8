@@ -7,9 +7,12 @@ body {
   background-attachment: fixed;
   font-family: "Inter", sans-serif;
   min-height: 100vh;
-  margin-inline: 420px;
 }
 
+.container {
+  max-width: 1290px;
+  margin-inline: auto;
+}
 /* where the body of the webpage begins */
 main {
   margin: 50px 120px 50px 120px;
@@ -118,14 +121,17 @@ form {
 }
 .answers-btn {
   color: white;
-  width: 462px;
+  width: 47%;
   border-radius: 40px;
-  margin-left: 25px;
+  /* margin-left: 25px; */
   height: 90px;
   background-color: rgb(255 255 255 / 11%);
   color: #fff;
   box-shadow: inset 3px 3px 1px 2px white;
   border-radius: 40px;
+  display: inline-block;
+  margin: 0;
+  margin-block-end: 15px;
 }
 
 footer h3 {
@@ -183,7 +189,7 @@ form textarea {
   border: 0;
   border-bottom: 3.5px solid purple;
   background-color: transparent;
-  width: 1162px;
+  width: 831px;
   height: 23px;
   font-family: "inter";
   font-size: 19px;
@@ -194,8 +200,11 @@ form textarea {
 }
 
 form textarea:focus {
-  border: none;
   outline: none;
+}
+
+.btn-cyan-feedback-page {
+  margin: 0;
 }
 /* end of Feedback page */
 
