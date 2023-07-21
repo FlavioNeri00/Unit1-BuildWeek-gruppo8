@@ -13,16 +13,21 @@ function countdown() {
   if (seconds == -1) {
     console.log("finish");
     clearTimeout(timerId);
+  } else if (seconds === 0) {
+    clearTimeout(timerId);
+    incorrectAnswer++;
+    console.log("not given: " + incorrectAnswer);
+    questionsCreator();
   } else {
     elem.innerHTML = seconds;
     seconds--;
   }
 }
 
-function tempo() {
+function time() {
   timerId = setInterval(countdown, 1000);
 }
-tempo();
+time();
 
 const questions = [
   {
@@ -135,7 +140,6 @@ const questionsCreator = () => {
     firstButtonDiv.style.backgroundColor = "rgb(255 255 255 / 11%)";
     firstButtonDiv.classList.add("answers-btn");
     firstButtonDiv.innerText = `${answers[i]}`;
-    setTimeout(questionsCreator, 31000);
   }
 
   if (answers.length === 2) {
@@ -148,14 +152,15 @@ const questionsCreator = () => {
 
   seconds = 30;
   timerId = 0;
+
+  questionNumber++;
+  console.log("number", questionNumber);
+  newPage();
 };
 
 function Verifying(id) {
   let answer = questions[posizioneArray];
   const answerGiven = document.getElementById(id);
-
-  questionNumber++;
-  console.log("numero", questionNumber);
 
   if (answer.correct_answer === answerGiven.innerText) {
     answerGiven.style.backgroundColor = "#00A901";
@@ -170,13 +175,13 @@ function Verifying(id) {
   for (let index = 0; index < 4; index++) {
     document.getElementById("btn" + index).disabled = "true";
   }
-  newPage();
 }
 
 nextButton.onclick = questionsCreator;
 
 const newPage = () => {
-  if (questionNumber === 10) {
+  if (questionNumber > 10) {
+    // clearInterval();
     const myOldBody = document.getElementsByTagName("body")[0];
     console.log("container", myOldBody);
     let title = "";

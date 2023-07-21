@@ -132,6 +132,8 @@ form {
   display: inline-block;
   margin: 0;
   margin-block-end: 15px;
+  font-family: "Outfit", sans-serif;
+  font-size: 23px;
 }
 
 footer h3 {
@@ -393,6 +395,7 @@ form textarea:focus {
   border-radius: 50px;
   border-color: white;
   content: "";
+  background-color: white;
 }
 
 .checkbox {
