@@ -1,7 +1,7 @@
 let seconds = 30;
 let elem = document.getElementById("demo");
 let timerId = 0;
-let questionNumber = 0;
+let questionNumber = 1;
 let correctAnswer = 0;
 
 let incorrectAnswer = 0;
@@ -133,6 +133,7 @@ const questionsCreator = () => {
     firstButtonDiv.style.backgroundColor = "rgb(255 255 255 / 11%)";
     firstButtonDiv.classList.add("answers-btn");
     firstButtonDiv.innerText = `${answers[i]}`;
+    setTimeout(questionsCreator, 31000);
   }
 
   if (answers.length === 2) {
@@ -147,21 +148,18 @@ const questionsCreator = () => {
   timerId = 0;
 };
 
-function onVerifica(id) {
-  // const titolo = document.getElementById("question-title").innerText;
-  // const risposta = questions.find(a => a.question === titolo);
-
-  risposta = questions[posizioneArray];
-  const rispostaData = document.getElementById(id);
+function Verifying(id) {
+  let answer = questions[posizioneArray];
+  const answerGiven = document.getElementById(id);
 
   questionNumber++;
   console.log("numero", questionNumber);
 
-  if (risposta.correct_answer === rispostaData.innerText) {
-    rispostaData.style.backgroundColor = "green";
+  if (answer.correct_answer === answerGiven.innerText) {
+    answerGiven.style.backgroundColor = "#00A901";
     correctAnswer++;
   } else {
-    rispostaData.style.backgroundColor = "red";
+    answerGiven.style.backgroundColor = "#E01B22";
     incorrectAnswer++;
   }
 
